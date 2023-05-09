@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.185.0/",
+    "esbuild": "https://deno.land/x/esbuild@v0.17.18/mod.js",
+    "surreal": "https://deno.land/x/surrealdb@v0.6.0/mod.ts",
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/server": "https://esm.sh/react-dom@18.2.0/server"
+  }
+}

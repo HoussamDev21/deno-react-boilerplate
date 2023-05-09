@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=index.tsx,client/index.tsx index.tsx",
+    "database": "surreal start --user root --pass root --bind 0.0.0.0:8080 file:database"
+  },
+  "importMap": "./import-map.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "lib": [
+      "DOM",
+      "es2015",
+      "deno.window"
+    ]
+  },
+  "fmt": {
+    "options": {
+      "semiColons": false,
+      "lineWidth": 200
+    }
+  }
+}
