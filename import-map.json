@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@/": "./",
     "std/": "https://deno.land/std@0.185.0/",
     "esbuild": "https://deno.land/x/esbuild@v0.17.18/mod.js",
     "surreal": "https://deno.land/x/surrealdb@v0.6.0/mod.ts",

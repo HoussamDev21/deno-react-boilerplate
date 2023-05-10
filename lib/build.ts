@@ -1,5 +1,5 @@
 import * as esbuild from 'esbuild'
-import importMap from '../import-map.json' assert { type: 'json' }
+import importMap from '@/import-map.json' assert { type: 'json' }
 
 export default async function build(pkgs: string[]) {
 
@@ -27,7 +27,6 @@ export default async function build(pkgs: string[]) {
   const httpPlugin: esbuild.Plugin = {
     name: 'http',
     setup: (build) => {
-      // handle relative imports
       build.onResolve({ filter: /^\// }, (args) => {
         const { origin } = new URL(args.importer)
         return {
@@ -38,7 +37,7 @@ export default async function build(pkgs: string[]) {
       // handle absolute imports
       build.onResolve({ filter: /^https?:\/\// }, (args) => ({
         path: args.path,
-        namespace: 'http-ns',
+        namespace: 'http-ns'
       }))
       build.onLoad({ filter: /.*/, namespace: 'http-ns' }, async (args) => {
         const res = await fetch(args.path)
