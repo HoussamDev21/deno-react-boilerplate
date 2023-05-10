@@ -1,7 +1,5 @@
-import Counter from "./components/Counter.tsx"
-
-export default function App() {
-  return <div>
-    hello <Counter />
-  </div>
+export default function App({ children }: { children: React.ReactNode }) {
+  return <>
+    {children}
+  </>
 }
